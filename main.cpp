@@ -40,7 +40,20 @@
  *              - if value of [arr] at index [i] is greater than [largest]
  *                  - Set the value of [largest] to the value at idex [i] of [arr]
  *          - Return the value of [largest]
+ *   Main:
+ *      - Create int [numStudents]
+ *      - Create int array [numMovies]
+ *      - Ask user how many students were surveyed and store in [numStudents]
+ *      - For int [i] = 0 till [numStudents]
+ *          - Ask user the number of movies seen by student [i] + 1
+ *          - If entered value is negative, make positive
+ *          - Store value in [numMovies] at index [i]
+ *      - Use average() to print out the average
+ *      - Use mode() to print out the mode
+ *      - Use median() to print out the mode
  */
+
+
 #include <iostream>
 
 using namespace std;
@@ -94,5 +107,16 @@ int median(int* arr, int* size){
     }
 
     return *(arr + medianIndex);
+}
+
+int mode(int* arr, int* size){
+    int largest = 0;
+    for( int i = 0; i < *size; i++){
+        if( *(arr + i) > largest){
+            largest = *(arr + i);
+        }
+    }
+
+    return largest;
 }
 
