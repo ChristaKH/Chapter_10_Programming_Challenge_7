@@ -82,3 +82,17 @@ void sort(int* arr, int* size){
     }while(sorted == false);
 }
 
+int median(int* arr, int* size){
+    int medianIndex = 0;
+    sort(arr, size);
+    if(*size == 1){
+        return *arr;
+    } else if(*size % 2 == 0){
+        medianIndex = (*size/2) - 1;
+    } else{
+        medianIndex = *size/2;
+    }
+
+    return *(arr + medianIndex);
+}
+
