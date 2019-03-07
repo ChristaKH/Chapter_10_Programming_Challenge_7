@@ -34,6 +34,12 @@
  *                  index [i] + 1
  *                      - Use [temp] to switch value positions
  *                      - Set [sorted] to false
+ *      - mode(int[] arr*, int size*): returns the mode value in the set of values
+ *          - Create int [largest] and set to 0
+ *          - for int [i] = 0 till [size]
+ *              - if value of [arr] at index [i] is greater than [largest]
+ *                  - Set the value of [largest] to the value at idex [i] of [arr]
+ *          - Return the value of [largest]
  */
 #include <iostream>
 
