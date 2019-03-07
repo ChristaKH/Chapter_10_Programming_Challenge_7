@@ -45,7 +45,11 @@
 
 using namespace std;
 
+int average(int* [], int*);
+int median(int* [], int*);
+int sort(int* [], int* );
+int mode(int*[], int*);
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
