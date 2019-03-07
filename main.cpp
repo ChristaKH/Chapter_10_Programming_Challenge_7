@@ -45,16 +45,16 @@
 
 using namespace std;
 
-int average(int*, int*);
+double average(int*, int*);
 int median(int*, int*);
-int sort(int*, int* );
+void sort(int*, int* );
 int mode(int*, int*);
 
 int main() {
     return 0;
 }
 
-int average(int* arr, int* size ){
+double average(int* arr, int* size ){
     int total = 0;
     double average = 0;
 
@@ -65,3 +65,20 @@ int average(int* arr, int* size ){
     average = (double)total/ *size;
     return average;
 }
+
+void sort(int* arr, int* size){
+    int temp = *(arr);
+    bool sorted = true;
+    do{
+        sorted = true;
+        for(int i = 0; i < (*size - 1); i++){
+            if(*(arr + i) > *(arr + i + 1)){
+                temp = *(arr + i);
+                *(arr + i) = *(arr + i + 1);
+                *(arr + i + 1) = temp;
+                sorted = false;
+            }
+        }
+    }while(sorted == false);
+}
+
