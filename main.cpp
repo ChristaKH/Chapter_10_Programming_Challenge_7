@@ -18,6 +18,12 @@
  *              - add int array value at index [i] to [total]
  *          - Set [average] equal to [total] divided by size
  *          -return [average]
+ *      - median(int[]*, int size): returns the middle value of the array
+ *          - use sort() to sort array
+ *          - Create int [index]
+ *          - Set [index] equal to size/2 - 1
+ *          - If [size] is 1, return value at array index 1
+ *          - Else, return the value of the array at index [index]
  */
 #include <iostream>
 
