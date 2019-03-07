@@ -45,11 +45,23 @@
 
 using namespace std;
 
-int average(int* [], int*);
-int median(int* [], int*);
-int sort(int* [], int* );
-int mode(int*[], int*);
+int average(int*, int*);
+int median(int*, int*);
+int sort(int*, int* );
+int mode(int*, int*);
 
 int main() {
     return 0;
+}
+
+int average(int* arr, int* size ){
+    int total = 0;
+    double average = 0;
+
+    for(int i = 0; i < *size; i++){
+        total += *(arr + i);
+    }
+
+    average = (double)total/ *size;
+    return average;
 }
