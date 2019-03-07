@@ -11,19 +11,29 @@
  *
  * Algorithm:
  *  Methods:
- *      - average(int[]*, int size*): calculates the average of the values in an array
+ *      - average(int[] arr*, int size*): calculates the average of the values in an array
  *          - Create int [total] and set to 0
  *          - Create double [average] and set to 0
  *          - for int [i] = 0 till [size]
  *              - add int array value at index [i] to [total]
  *          - Set [average] equal to [total] divided by size
  *          -return [average]
- *      - median(int[]*, int size): returns the middle value of the array
+ *      - median(int[] arr*, int size): returns the middle value of the array
  *          - use sort() to sort array
  *          - Create int [index]
  *          - Set [index] equal to size/2 - 1
  *          - If [size] is 1, return value at array index 1
  *          - Else, return the value of the array at index [index]
+ *      - sort(int[] arr*, int size*): sorts the entered array from smallest value to biggest value
+ *          - Create int [temp] and set to 0
+ *          - Create bool [sorted] and set equal to true
+ *          - do-while [sorted] is true
+ *              - Set [sorted] to true
+ *              -for int [i] = 0 till [size]- 1
+ *                  -if value of [arr] at index [i] is greater than value of [arr] at
+ *                  index [i] + 1
+ *                      - Use [temp] to switch value positions
+ *                      - Set [sorted] to false
  */
 #include <iostream>
 
