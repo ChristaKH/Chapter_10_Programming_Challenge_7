@@ -64,6 +64,29 @@ void sort(int*, int* );
 int mode(int*, int*);
 
 int main() {
+    int numStudents = 0;
+
+    cout << "How many students were surveyed?" << endl;
+    cin >> numStudents;
+    if(numStudents < 0){
+        numStudents *= -1;
+    }
+
+    int numMovies[numStudents];
+    int temp = 0;
+    for(int i = 0; i < numStudents; i++){
+        cout << "How many movies did student " << i + 1 << " see?" << endl;
+        cin >> temp;
+        if(temp < 0){
+            temp *= -1;
+        }
+
+        *(numMovies + i) = temp;
+    }
+    cout << endl << "The average of the number of movies watched is " << average(numMovies, &numStudents) << endl;
+    cout << endl << "The median of the number of movies watched is " << median(numMovies, &numStudents) << endl;
+    cout << endl << "The mode of the number of movies watched is " << mode(numMovies, &numStudents) << endl;
+
     return 0;
 }
 
